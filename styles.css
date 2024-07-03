@@ -1,0 +1,203 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #fff; /* テキストを白に設定 */
+    background-color: black; /* 背景色を黒に設定 */
+    font-size: 18px; /* フォントサイズを大きく設定 */
+    overflow: auto; /* スクロールを有効にする */
+    margin-top: 100vh; /* 背景動画の高さ分だけマージンを追加 */
+}
+
+.background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* 画面全体の高さ */
+    overflow: hidden;
+    z-index: -1;
+}
+
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+#background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 動画が見切れないようにカバーする */
+}
+
+#logo {
+    position: absolute;
+    top: 20px; /* 任意の位置に調整 */
+    left: 20px; /* 任意の位置に調整 */
+    width: 200px; /* ロゴのサイズを調整 */
+    height: auto;
+    z-index: 1;
+}
+
+header {
+    background-color: rgba(51, 51, 51, 0.8); /* 半透明の背景色 */
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0; /* 上に配置 */
+    z-index: 1000;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* 下に影を追加 */
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    width: 100%; /* ヘッダーの幅を画面全体に広げる */
+    justify-content: space-around; /* メニューアイテムを均等に配置 */
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+}
+
+header nav ul li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* コンテンツを下に寄せる */
+    flex: 1;
+    padding: 20px;
+    background-image: url('utyuu.jpg'); /* 背景画像 */
+    background-size: cover; /* 背景画像のサイズをカバー */
+    background-attachment: fixed; /* 背景画像を固定 */
+    background-position: center; /* 背景画像を中央に配置 */
+}
+
+section {
+    margin-bottom: 40px;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+#hero {
+    text-align: left; /* テキストを左寄せ */
+    margin-bottom: 40px;
+    position: relative;
+    padding-top: 300px; /* テキストの上に余白を追加 */
+}
+
+#hero img {
+    width: 50%; /* 画像の幅を50%に設定 */
+    max-width: 400px; /* 最大幅を400pxに設定 */
+    height: auto;
+    border-radius: 8px;
+    margin: 0; /* 中央寄せを解除 */
+    position: absolute; /* 左上に配置 */
+    top: 0;
+    left: 0;
+}
+
+strong {
+    background-color: rgba(0, 0, 0, 0.5); /* 半透明の黒背景 */
+    padding: 2px 5px; /* 余白を追加して読みやすく */
+    border-radius: 3px; /* 角を丸める */
+}
+
+#characters {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.character-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.character img {
+    width: 400px; /* 画像の幅を400pxに設定 */
+    height: auto;
+    border-radius: 8px;
+}
+
+.character-info {
+    flex: 1;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.gallery figure {
+    width: 30%;
+    margin: 0;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border: 2px solid #333;
+    border-radius: 5px;
+    transition: transform 0.2s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+.gallery figcaption {
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #fff; /* キャプションのテキストを白に設定 */
+}
+
+#news .video-link {
+    margin-top: 20px;
+}
+
+#news iframe {
+    width: 100%;
+    max-width: 600px; /* 動画の最大幅を設定 */
+    height: 315px;
+    border: none;
+}
+
+footer {
+    background-color: rgba(51, 51, 51, 0.8); /* 半透明の背景色 */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    width: 100%;
+}
